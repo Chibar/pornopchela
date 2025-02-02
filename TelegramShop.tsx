@@ -80,15 +80,15 @@ export default function TelegramShop() {
               <p>{product.description}</p>
             </CardContent>
             <CardFooter>
-              <Button onClick={() => addToCart(product.id)}>Add to Cart</Button>
+              <Button onClick={() => addToCart(product.id)}>В корзину</Button>
             </CardFooter>
           </Card>
         ))}
       </div>
       <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-4">Cart</h2>
+        <h2 className="text-xl font-semibold mb-4">Корзина</h2>
         {Object.keys(cart).length === 0 ? (
-          <p>Your cart is empty</p>
+          <p>Пусто</p>
         ) : (
           <div>
             {Object.entries(cart).map(([productId, quantity]) => {
@@ -98,11 +98,11 @@ export default function TelegramShop() {
                   <span>
                     {product.name} x {quantity}
                   </span>
-                  <span>${(product.price * quantity).toFixed(2)}</span>
+                  <span>{(product.price * quantity).toFixed(2)} ₽</span>
                 </div>
               ) : null
             })}
-            <div className="font-bold mt-4">Total: ${getTotalPrice()}</div>
+            <div className="font-bold mt-4">Итого: {getTotalPrice()} ₽</div>
           </div>
         )}
       </div>
