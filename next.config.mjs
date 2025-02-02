@@ -5,6 +5,8 @@ try {
   // ignore error
 }
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: 'build',
@@ -22,6 +24,13 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  reactStrictMode: true,
+  images: {
+    unoptimized: true, // Disable default image optimization
+  },
+  assetPrefix: '/pornopchela/',
+  basePath: '/pornopchela',
+  output: 'export'
 }
 
 mergeConfig(nextConfig, userConfig)

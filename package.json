@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build && touch ./build/.nojekyll",
+    "deploy": "gh-pages -d build -t true"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
