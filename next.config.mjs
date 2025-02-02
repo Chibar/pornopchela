@@ -28,8 +28,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: '/pornopchela/',
-  basePath: '/pornopchela',
+  assetPrefix: isProd ? '/pornopchela/' : '',
+  basePath: isProd ? '/pornopchela' : '',
   output: 'export'
 }
 

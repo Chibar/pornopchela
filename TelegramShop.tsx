@@ -73,6 +73,7 @@ export default function TelegramShop() {
         {products.map((product) => (
           <Card key={product.id}>
             <CardHeader>
+              <img style={customCss.Image} src={product.image} />
               <CardTitle>{product.name}</CardTitle>
               <CardDescription>{product.price.toFixed(2)} ₽</CardDescription>
             </CardHeader>
@@ -110,3 +111,10 @@ export default function TelegramShop() {
   )
 }
 
+const customCss = {
+  Image: {
+    display: "flex",
+    maxWidth: '100%',
+    marginBottom: "10px",
+  }
+}
