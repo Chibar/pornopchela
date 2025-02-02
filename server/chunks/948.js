@@ -1,1 +1,0 @@
-"use strict";exports.id=948,exports.ids=[948],exports.modules={1948:(e,r,t)=>{t.r(r),t.d(r,{default:()=>s});let s=(0,t(5347).createProxy)(String.raw`C:\Users\chiba\OneDrive\Рабочий стол\porno pchela\webapp\TelegramShop.tsx#default`)}};
